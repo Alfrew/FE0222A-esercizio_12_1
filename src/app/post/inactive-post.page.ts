@@ -1,7 +1,7 @@
-import { Component, OnInit } from "@angular/core";
 import { Ipost } from "../interface/post";
-import { CategoryService } from "../service/category.service";
+import { Component, OnInit } from "@angular/core";
 import { PostService } from "../service/post.service";
+import { CategoryService } from "../service/category.service";
 
 @Component({
   template: `

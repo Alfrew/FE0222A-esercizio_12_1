@@ -1,11 +1,9 @@
 import { NgModule } from "@angular/core";
-
-import { PostRoutingModule } from "./post-routing.module";
+import { DetailPage } from "./detail.page";
+import { ActivePostPage } from "./active-post.page";
 import { SharedModule } from "../shared/shared.module";
 import { InactivePostPage } from "./inactive-post.page";
-import { ActivePostPage } from "./active-post.page";
-import { DetailPage } from "./detail.page";
-import { CommonModule } from "@angular/common";
+import { PostRoutingModule } from "./post-routing.module";
 
 @NgModule({
   declarations: [InactivePostPage, ActivePostPage, DetailPage],

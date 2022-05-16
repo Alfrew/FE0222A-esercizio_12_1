@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { AuthService } from "../service/auth.service";
 
 @Component({
   selector: "app-navbar",
@@ -31,6 +32,12 @@ import { Component, OnInit } from "@angular/core";
             <li class="nav-item">
               <a class="nav-link" routerLink="/users" routerLinkActive="active">Users</a>
             </li>
+            <li>
+              <button *ngIf="!logged" (click)="onLogin()" class="btn btn-success">Login</button>
+            </li>
+            <li>
+              <button *ngIf="logged" (click)="onLogout()" class="btn btn-danger">Logout</button>
+            </li>
           </ul>
         </div>
       </div>
@@ -39,7 +46,17 @@ import { Component, OnInit } from "@angular/core";
   styles: [],
 })
 export class NavbarComponent implements OnInit {
-  constructor() {}
+  logged: boolean = false;
+  constructor(private authSrv: AuthService) {}
 
   ngOnInit(): void {}
+
+  onLogin() {
+    this.authSrv.login();
+    this.logged = true;
+  }
+  onLogout() {
+    this.authSrv.logout();
+    this.logged = false;
+  }
 }

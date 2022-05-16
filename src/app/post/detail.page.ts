@@ -1,8 +1,8 @@
-import { Component, OnInit } from "@angular/core";
-import { ActivatedRoute, Params } from "@angular/router";
 import { Subscription } from "rxjs";
 import { Ipost } from "../interface/post";
+import { Component, OnInit } from "@angular/core";
 import { PostService } from "../service/post.service";
+import { ActivatedRoute, Params } from "@angular/router";
 
 @Component({
   template: `<ng-container *ngIf="post">
@@ -10,8 +10,8 @@ import { PostService } from "../service/post.service";
       <h5 class="card-header">{{ post.id }} - {{ post.title | uppercase }}</h5>
       <div class="card-body">
         <p class="card-text">{{ post.body }}</p>
-        <p>Categoria: {{ post.category }}</p>
-        <p>Autore: {{ post.author }}</p>
+        <p>Category: {{ post.category }}</p>
+        <p>Author: {{ post.author }}</p>
       </div>
     </div>
   </ng-container> `,

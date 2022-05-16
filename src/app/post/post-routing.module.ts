@@ -1,8 +1,8 @@
 import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
 import { AuthGuard } from "../auth.guard";
-import { ActivePostPage } from "./active-post.page";
 import { DetailPage } from "./detail.page";
+import { ActivePostPage } from "./active-post.page";
+import { RouterModule, Routes } from "@angular/router";
 import { InactivePostPage } from "./inactive-post.page";
 
 const routes: Routes = [
@@ -22,6 +22,7 @@ const routes: Routes = [
   {
     path: "inactive/:id",
     component: DetailPage,
+    canActivate: [AuthGuard],
   },
 ];
 

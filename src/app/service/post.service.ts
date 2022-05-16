@@ -5,7 +5,7 @@ import { Ipost } from "../interface/post";
   providedIn: "root",
 })
 export class PostService {
-  private POSTS: Ipost[] = [
+  private posts: Ipost[] = [
     {
       id: 1,
       body: "Donec euismod, nisl eget aliquam consectetur, nisl nunc ultrices eros, eu porttitor nisl nunc eget lorem. Donec euismod, nisl eget aliquam consectetur, nisl nunc ultrices eros, eu porttitor nisl nunc eget lorem. Donec euismod, nisl eget aliquam consectetur, nisl nunc ultrices eros, eu porttitor nisl nunc eget lorem. Donec euismod, nisl eget aliquam consectetur, nisl nunc ultrices eros, eu porttitor nisl nunc eget lorem. Donec euismod, nisl eget aliquam consectetur, nisl nunc ultrices eros, eu porttitor nisl nunc eget lorem. Donec euismod, nisl eget aliquam consectetur, nisl nunc ultrices eros, eu porttitor nisl nunc eget lorem. Donec euismod, nisl eget aliquam consectetur, nisl nunc ultrices eros, eu porttitor nisl nunc eget lorem. Donec euismod, nisl eget aliquam consectetur, nisl nunc ultrices eros, eu porttitor nisl nunc eget lorem. Donec euismod, nisl eget aliquam consect",
@@ -43,9 +43,9 @@ export class PostService {
   constructor() {}
 
   getPosts(): Ipost[] {
-    return this.POSTS;
+    return this.posts;
   }
   getPost(id: number) {
-    return this.POSTS.find((post) => post.id === id);
+    return this.posts.find((post) => post.id === id);
   }
 }

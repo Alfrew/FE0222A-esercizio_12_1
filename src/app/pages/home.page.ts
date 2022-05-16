@@ -17,9 +17,9 @@ export class HomePage implements OnInit {
   ngOnInit(): void {}
 
   postActive() {
-    this.router.navigate(["/activePost"]);
+    this.router.navigate(["/post/active"]);
   }
   postInactive() {
-    this.router.navigate(["inactivePost"]);
+    this.router.navigate(["/post/inactive"]);
   }
 }
